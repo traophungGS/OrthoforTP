@@ -19,8 +19,40 @@ body {
 /* Navigation Bar */
 .navbar {
     height: 60px;
-    background-color: transparent;
+    background-color: white;
     border-bottom: 1px solid #eee;
+    display: flex;
+    align-items: center;
+}
+
+.nav-home {
+    color: #E31C23;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-home:hover {
+    color: #c41820;
+}
+
+/* Page Header */
+.page-header {
+    background: linear-gradient(135deg, #E31C23 0%, #c41820 100%);
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.page-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1.2rem;
+    opacity: 0.95;
 }
 
 /* Hero Section */
@@ -138,9 +170,34 @@ body {
 .section h2 {
     font-size: 2.5rem;
     font-weight: 700;
-    margin-bottom: 50px;
-    text-align: center;
+    margin-bottom: 30px;
     color: #1a1a1a;
+}
+
+.section h2 a {
+    color: #E31C23;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.section h2 a:hover {
+    color: #c41820;
+    text-decoration: underline;
+}
+
+.section-link {
+    cursor: pointer;
+}
+
+.read-more {
+    color: #E31C23;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.read-more:hover {
+    color: #c41820;
 }
 
 .meet-ortho .content {
@@ -150,6 +207,70 @@ body {
     font-size: 1.1rem;
     color: #555;
     line-height: 1.8;
+}
+
+/* Page Content */
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page-content h2 {
+    margin-top: 40px;
+    margin-bottom: 20px;
+    color: #E31C23;
+}
+
+.page-content h2:first-child {
+    margin-top: 0;
+}
+
+.page-content p {
+    margin-bottom: 20px;
+    color: #555;
+    line-height: 1.8;
+    font-size: 1.05rem;
+}
+
+.page-content ul {
+    margin-bottom: 20px;
+    margin-left: 20px;
+    color: #555;
+}
+
+.page-content ul li {
+    margin-bottom: 10px;
+    line-height: 1.8;
+}
+
+/* Values & Initiatives Grid */
+.values-grid,
+.initiatives-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    margin: 30px 0;
+}
+
+.value-card,
+.initiative-item {
+    background-color: #f9f9f9;
+    padding: 25px;
+    border-radius: 8px;
+    border-left: 5px solid #E31C23;
+}
+
+.value-card h3,
+.initiative-item h3 {
+    color: #E31C23;
+    margin-bottom: 12px;
+    font-size: 1.2rem;
+}
+
+.value-card p,
+.initiative-item p {
+    color: #666;
+    line-height: 1.7;
 }
 
 /* Issues Grid */
@@ -174,13 +295,63 @@ body {
 
 .issue-card h3 {
     font-size: 1.4rem;
-    color: #E31C23;
     margin-bottom: 15px;
+}
+
+.issue-card h3 a {
+    color: #E31C23;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.issue-card h3 a:hover {
+    color: #c41820;
 }
 
 .issue-card p {
     color: #666;
     line-height: 1.8;
+}
+
+.learn-more {
+    color: #E31C23;
+    text-decoration: none;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.learn-more:hover {
+    color: #c41820;
+}
+
+/* CTA Box */
+.cta-box {
+    background: linear-gradient(135deg, #E31C23 0%, #c41820 100%);
+    color: white;
+    padding: 40px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 50px;
+}
+
+.cta-box h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.cta-box p {
+    color: white;
+    font-size: 1.1rem;
+}
+
+.cta-box a {
+    color: white;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.cta-box a:hover {
+    color: #f0f0f0;
 }
 
 /* Footer */
@@ -197,6 +368,8 @@ body {
     align-items: center;
     flex-wrap: wrap;
     gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .footer-social {
@@ -235,7 +408,16 @@ body {
         font-size: 1.8rem;
     }
 
+    .page-header h1 {
+        font-size: 2rem;
+    }
+
     .issues-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .values-grid,
+    .initiatives-list {
         grid-template-columns: 1fr;
     }
 
@@ -260,6 +442,26 @@ body {
 
     .section h2 {
         font-size: 1.5rem;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
+    }
+
+    .page-header {
+        padding: 40px 20px;
+    }
+
+    .page-header h1 {
+        font-size: 1.5rem;
+    }
+
+    .page-header p {
+        font-size: 1rem;
+    }
+
+    .cta-box {
+        padding: 30px 20px;
+    }
+
+    .cta-box h3 {
+        font-size: 1.3rem;
     }
 }
